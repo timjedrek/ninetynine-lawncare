@@ -1,8 +1,37 @@
-<nav class="w-full py-4 text-center fixed text-xs font-semibold"
-:class="{ 'bg-white shadow transition duration-100' : showBar }"
-@scroll.window="showBar = (window.pageYOffset > 20) ? true : false"
-  >
-    <!--Flex Container-->
-    <div class=""></div>
-</nav>
+<div class="bg-stone-200" x-data="{ showBar: false }">
 
+  <nav class="w-full fixed"
+  :class="{ 'bg-white shadow transition duration-100' : showBar }"
+  @scroll.window="showBar = (window.pageYOffset > 20) ? true : false"
+  x-data="{ open: false }"
+    >
+      <!--Flex Container-->
+      <div class="flex flex row items-center justify-between py-5">
+        <!--Logo Box-->
+          <div class="">
+            <%= link_to root_path do %>
+              <%= image_tag "logo1.png", class: "h-24 ml-5" %>
+            <% end %>
+          </div>
+        <!--Mobile Hamburger-->
+          <div class="lg:hidden" x-on:click="open = ! open">
+            <%= image_tag "100dollar-hamburger.png", class: "h-7 mr-5" %>
+          </div>
+        <!--Link Box-->
+          <div class="hidden lg:block">
+          </div>
+      </div>
+      <!--Mobile Menu-->
+      <div class="bg-white w-full p-5" x-show="open" x-transition x-transition:enter.duration.600ms   :class="{ 'bg-white shadow transition duration-100' : showBar }" @scroll.window="showBar = (window.pageYOffset > 20) ? true : false">
+        <ul class="text-center font-semibold text-lg gap-5">
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Services", root_path %></li>
+          <li><%= link_to "About Us", root_path %></li>
+          <li><%= link_to "Gallery", root_path %></li>
+          <li><%= link_to "Contact Us", root_path %></li>
+        </ul>
+      </div>
+  </nav>
+
+
+</div>
