@@ -1,42 +1,55 @@
-<div class="bg-stone-200" x-data="{ showBar: false }">
-
+<!--Top Menu-->
+<div x-data="{ showBar: false }">
   <nav class="w-full fixed"
-  :class="{ 'bg-white shadow transition duration-100' : showBar }"
+  :class="{ 'bg-white shadow transition duration-500' : showBar }"
   @scroll.window="showBar = (window.pageYOffset > 20) ? true : false"
   x-data="{ open: false }"
-    >
-      <!--Flex Container-->
-      <div class="flex flex row items-center justify-between py-5">
-        <!--Logo Box-->
-          <div class="hover:brightness-75">
-            <%= link_to root_path do %>
-              <%= image_tag "logo1.png", class: "h-24 ml-5" %>
-            <% end %>
-          </div>
-        <!--Mobile Hamburger-->
-          <div class="lg:hidden" x-on:click="open = ! open">
-            <%= image_tag "100dollar-hamburger.png", class: "h-7 mr-5 hover:contrast-50 hover:invert" %>
-          </div>
-        <!--Link Box-->
-          <div class="hidden lg:block mr-5 ">
-          <%= link_to "Home", root_path, class: "px-5 hover:text-green-600" %>
-          <%= link_to "Services", root_path, class: "px-5 hover:text-green-600" %>
-          <%= link_to "About Us", root_path, class: "px-5 hover:text-green-600" %>
-          <%= link_to "Gallery", root_path, class: "px-5 hover:text-green-600" %>
-          <%= link_to "Contact Us", root_path, class: "px-5 hover:text-green-600" %>
-          </div>
-      </div>
-      <!--Mobile Menu-->
-      <div class="bg-white w-full p-5" x-show="open" x-transition x-transition:enter.duration.600ms   :class="{ 'bg-white shadow transition duration-100' : showBar }" @scroll.window="showBar = (window.pageYOffset > 20) ? true : false">
-        <ul class="text-center font-semibold text-lg gap-5">
-          <li><%= link_to "Home", root_path, class: "hover:text-green-600" %></li>
-          <li><%= link_to "Services", root_path, class: "hover:text-green-600" %></li>
-          <li><%= link_to "About Us", root_path, class: "hover:text-green-600" %></li>
-          <li><%= link_to "Gallery", root_path, class: "hover:text-green-600" %></li>
-          <li><%= link_to "Contact Us", root_path, class: "hover:text-green-600" %></li>
-        </ul>
-      </div>
+  >
+    <!--Flex Container-->
+    <div class="flex flex row items-center justify-between py-5">
+      <!--Logo Box-->
+        <div class="hover:brightness-75">
+          <%= link_to root_path do %>
+            <%= image_tag "logo1.png", class: "h-24 ml-5" %>
+          <% end %>
+        </div>
+      <!--Mobile Hamburger-->
+        <div class="lg:hidden" x-on:click="open = ! open">
+          <%= image_tag "100dollar-hamburger.png", class: "h-7 mr-5 hover:contrast-50 hover:invert" %>
+        </div>
+      <!--Link Box-->
+        <div class="hidden lg:block mr-5 ">
+        <%= link_to "Home", root_path, class: "px-5 hover:text-green-600" %>
+        <%= link_to "Services", root_path, class: "px-5 hover:text-green-600" %>
+        <%= link_to "About Us", root_path, class: "px-5 hover:text-green-600" %>
+        <%= link_to "Gallery", root_path, class: "px-5 hover:text-green-600" %>
+        <%= link_to "Contact Us", root_path, class: "px-5 hover:text-green-600" %>
+        </div>
+    </div>
+    <!--Mobile Menu-->
+    <div class="bg-white w-full p-5" x-show="open" x-transition x-transition:enter.duration.600ms   :class="{ 'bg-white shadow transition duration-100' : showBar }" @scroll.window="showBar = (window.pageYOffset > 20) ? true : false">
+      <ul class="text-center font-semibold text-lg gap-5">
+        <li><%= link_to "Home", root_path, class: "hover:text-green-600" %></li>
+        <li><%= link_to "Services", root_path, class: "hover:text-green-600" %></li>
+        <li><%= link_to "About Us", root_path, class: "hover:text-green-600" %></li>
+        <li><%= link_to "Gallery", root_path, class: "hover:text-green-600" %></li>
+        <li><%= link_to "Contact Us", root_path, class: "hover:text-green-600" %></li>
+      </ul>
+    </div>
   </nav>
-
-
 </div>
+<main>
+<header class="w-full h-screen bg-head <%= randomized_background_image %> bg-cover bg-center flex justify-center items-center">
+    <div class="flex flex-col justify-center items-center drop-shadow-2xl">
+        <h1 class=" text-center text-5xl text-amber-200 font-bold">Lawncare<br>
+        <span class="text-amber-100 text-4xl">Para encontrando las fiestas</span>
+        </h1>
+        <p class="my-5 text-center text-xl text-white">En su área y región</p>
+        <%= link_to 'Nueva Fiesta', root_path, class: "text-center block p-3 px-6 text-slate-900 bg-amber-100 rounded-full hover:bg-amber-200" %>
+    </div>
+</header>
+sadsdas
+asd
+asd
+as
+</main>

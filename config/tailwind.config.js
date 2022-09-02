@@ -12,6 +12,14 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      backgroundImage : {
+        'randomhead0' : "url('hero0.jpg')",
+        'randomhead1' : "url('hero1.jpg')",
+        'randomhead2' : "url('hero2.jpg')",
+        'randomhead3' : "url('hero3.jpg')",
+        'randomhead4' : "url('hero4.jpg')",
+
+      }
     },
   },
   plugins: [
