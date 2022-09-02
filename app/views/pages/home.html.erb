@@ -1,0 +1,8 @@
+<nav class="w-full py-4 text-center fixed text-xs font-semibold"
+:class="{ 'bg-white shadow transition duration-100' : showBar }"
+@scroll.window="showBar = (window.pageYOffset > 20) ? true : false"
+  >
+    <!--Flex Container-->
+    <div class=""></div>
+</nav>
+
