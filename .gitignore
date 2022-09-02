@@ -32,3 +32,8 @@
 
 /app/assets/builds/*
 !/app/assets/builds/.keep
+
+# Additional ignores
+notes.md
+*/.DS_Store/*
+.DS_Store
