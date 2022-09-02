@@ -8,27 +8,32 @@
       <!--Flex Container-->
       <div class="flex flex row items-center justify-between py-5">
         <!--Logo Box-->
-          <div class="">
+          <div class="hover:brightness-75">
             <%= link_to root_path do %>
               <%= image_tag "logo1.png", class: "h-24 ml-5" %>
             <% end %>
           </div>
         <!--Mobile Hamburger-->
           <div class="lg:hidden" x-on:click="open = ! open">
-            <%= image_tag "100dollar-hamburger.png", class: "h-7 mr-5" %>
+            <%= image_tag "100dollar-hamburger.png", class: "h-7 mr-5 hover:contrast-50 hover:invert" %>
           </div>
         <!--Link Box-->
-          <div class="hidden lg:block">
+          <div class="hidden lg:block mr-5 ">
+          <%= link_to "Home", root_path, class: "px-5 hover:text-green-600" %>
+          <%= link_to "Services", root_path, class: "px-5 hover:text-green-600" %>
+          <%= link_to "About Us", root_path, class: "px-5 hover:text-green-600" %>
+          <%= link_to "Gallery", root_path, class: "px-5 hover:text-green-600" %>
+          <%= link_to "Contact Us", root_path, class: "px-5 hover:text-green-600" %>
           </div>
       </div>
       <!--Mobile Menu-->
       <div class="bg-white w-full p-5" x-show="open" x-transition x-transition:enter.duration.600ms   :class="{ 'bg-white shadow transition duration-100' : showBar }" @scroll.window="showBar = (window.pageYOffset > 20) ? true : false">
         <ul class="text-center font-semibold text-lg gap-5">
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Services", root_path %></li>
-          <li><%= link_to "About Us", root_path %></li>
-          <li><%= link_to "Gallery", root_path %></li>
-          <li><%= link_to "Contact Us", root_path %></li>
+          <li><%= link_to "Home", root_path, class: "hover:text-green-600" %></li>
+          <li><%= link_to "Services", root_path, class: "hover:text-green-600" %></li>
+          <li><%= link_to "About Us", root_path, class: "hover:text-green-600" %></li>
+          <li><%= link_to "Gallery", root_path, class: "hover:text-green-600" %></li>
+          <li><%= link_to "Contact Us", root_path, class: "hover:text-green-600" %></li>
         </ul>
       </div>
   </nav>
