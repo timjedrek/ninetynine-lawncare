@@ -1,17 +1,19 @@
-<!--Top Menu-->
-<div x-data="{ showBar: false }">
+<!--Activate Alpine-->
+<!--<div x-data="{ showBar: false }">-->
+<div x-data="{ open: false }">
+  <!--Top Menu-->
   <!--<nav class="w-full fixed"
   :class="{ 'bg-white shadow transition duration-500' : showBar }"
   @scroll.window="showBar = (window.pageYOffset > 20) ? true : false"
   x-data="{ open: false }"
   >-->
-  <nav class="w-full fixed bg-white" x-data="{ open: false }">
+  <nav class="w-full fixed bg-white" >
     <!--Flex Container-->
     <div class="flex flex row items-center justify-between py-5">
       <!--Logo Box-->
         <div class="hover:brightness-75">
           <%= link_to root_path do %>
-            <%= image_tag "logo1.png", class: "h-16 lg:h-24 ml-5" %>
+            <%= image_tag "logo1.png", class: "h-16 lg:h-20 ml-5" %>
           <% end %>
         </div>
       <!--Mobile Hamburger-->
@@ -29,7 +31,7 @@
     </div>
     <!--Mobile Menu-->
     <!--<div class="bg-white w-full p-5" x-show="open" x-transition x-transition:enter.duration.600ms   :class="{ 'bg-white shadow transition duration-100' : showBar }" @scroll.window="showBar = (window.pageYOffset > 20) ? true : false">-->
-    <div class="bg-white w-full h-screen flex flex-col justify-center pb-52" x-show="open" x-transition x-transition:enter.duration.600ms >
+    <div class="absolute bg-white w-full h-screen flex flex-col justify-center pb-52" x-show="open" x-transition x-transition:enter.duration.600ms >
       <ul class="text-center font-semibold text-lg">
         <li class="py-3"><%= link_to "Home", root_path, class: "hover:text-lime-600" %></li>
         <li class="py-3"><%= link_to "Services", root_path, class: "hover:text-lime-600" %></li>
@@ -39,20 +41,26 @@
       </ul>
     </div>
   </nav>
+  <main>
+    <header class="w-full h-screen bg-randomhead1 <%#= randomized_background_image %> bg-cover bg-center flex justify-center items-center">
+        <div class="flex flex-col justify-center items-center mt-10 mx-20 opacity-0 duration-[1500ms] translate-y-full"
+        x-intersect="$el.classList.add('opacity-100', 'translate-y-0', 'z-0')"
+        x-show="!open"
+        >
+          <h1 class=" text-center text-4xl sm:text-5xl font-bold">
+            Get the best lawn in your neighborhood<br>
+          </h1>
+          <%= link_to 'Schedule a quote', root_path, class: "mt-5 text-center block p-3 px-6 bg-lime-200 rounded-full hover:bg-lime-300" %>
+        </div>
+    </header>
+Lorem ipsum dolor sit amet, eu regione tamquam iuvaret vel. In phaedrum similique rationibus sed, et vis elitr accusam verterem. Ut modus concludaturque vix. An has purto reprimique interesset.
+
+Usu harum ubique intellegebat ei, cu vel clita efficiendi, vim an stet probo. Ut vis reque intellegebat. Aliquam eruditi mnesarchum in vis. Eu sea autem facilis, eros ferri expetenda nam ad, pro ad tempor propriae. Cu sea elit iusto periculis.
+
+Semper postulant cu vim. In iusto sonet comprehensam has. Autem maluisset vix ne, cum essent habemus ne, cu corpora moderatius ius. Nam cibo ipsum partiendo id, usu liber latine appetere eu, quot falli comprehensam nec ex. Ut vix consequat argumentum. Scripta fierent ea his, ea ignota nostrum ponderum mei, vim an hinc placerat consulatu.
+
+Essent gloriatur eu has. Quas dicat viris sea at, ne dictas nonumes phaedrum qui. Eruditi accusata mea ex. Mediocrem partiendo voluptatum mea an.
+
+Ea laudem doming philosophia usu, quo et gloriatur conceptam deseruisse, eum te adipiscing scriptorem disputationi. In has minim civibus officiis, sint dicam posidonium ut mel. At eam facer repudiare torquatos. Affert mollis argumentum qui ut, brute animal accusamus qui an, ne eum dolorem mandamus. Invenire oportere sententiae sea eu, quo velit disputando cu. Minim salutatus neglegentur his no, oblique mediocritatem his in. Ei eos impetus placerat disputationi, et duo quaeque insolens.
+  </main>
 </div>
-<main>
-  <header class="w-full h-screen bg-randomhead1 <%#= randomized_background_image %> bg-cover bg-center flex justify-center items-center" x-data>
-      <div class="flex flex-col justify-center items-center mt-10 mx-20 opacity-0 duration-[1500ms] translate-y-full"
-      x-intersect="$el.classList.add('opacity-100', 'translate-y-0')"
-      >
-        <h1 class=" text-center text-4xl sm:text-5xl font-bold">
-          Get the best lawn in your neighborhood<br>
-        </h1>
-        <%= link_to 'Schedule a quote', root_path, class: "mt-5 text-center block p-3 px-6 bg-lime-200 rounded-full hover:bg-lime-300" %>
-      </div>
-  </header>
-sadsdas
-asd
-asd
-as
-</main>
