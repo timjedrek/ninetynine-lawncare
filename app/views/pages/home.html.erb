@@ -7,7 +7,7 @@
   @scroll.window="showBar = (window.pageYOffset > 20) ? true : false"
   x-data="{ open: false }"
   >-->
-  <nav class="w-full fixed bg-white" >
+  <nav class="w-full fixed bg-white z-50" >
     <!--Flex Container-->
     <div class="flex flex row items-center justify-between py-5">
       <!--Logo Box-->
@@ -45,7 +45,7 @@
     <header class="w-full h-screen bg-randomhead1 <%#= randomized_background_image %> bg-cover bg-center flex justify-center items-center">
         <div class="flex flex-col justify-center items-center mt-10 mx-20 opacity-0 duration-[1500ms] translate-y-full"
         x-intersect="$el.classList.add('opacity-100', 'translate-y-0', 'z-0')"
-        x-show="!open"
+        
         >
           <h1 class=" text-center text-4xl sm:text-5xl font-bold">
             Get the best lawn in your neighborhood<br>
