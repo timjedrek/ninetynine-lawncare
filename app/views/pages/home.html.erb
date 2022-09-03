@@ -1,12 +1,6 @@
 <!--Activate Alpine-->
-<!--<div x-data="{ showBar: false }">-->
 <div x-data="{ open: false }">
   <!--Top Menu-->
-  <!--<nav class="w-full fixed"
-  :class="{ 'bg-white shadow transition duration-500' : showBar }"
-  @scroll.window="showBar = (window.pageYOffset > 20) ? true : false"
-  x-data="{ open: false }"
-  >-->
   <nav class="w-full fixed bg-white z-50" >
     <!--Flex Container-->
     <div class="flex flex row items-center justify-between py-5">
@@ -30,7 +24,6 @@
         </div>
     </div>
     <!--Mobile Menu-->
-    <!--<div class="bg-white w-full p-5" x-show="open" x-transition x-transition:enter.duration.600ms   :class="{ 'bg-white shadow transition duration-100' : showBar }" @scroll.window="showBar = (window.pageYOffset > 20) ? true : false">-->
     <div class="absolute bg-white w-full h-screen flex flex-col justify-center pb-52" x-show="open" x-transition x-transition:enter.duration.600ms >
       <ul class="text-center font-semibold text-lg">
         <li class="py-3"><%= link_to "Home", root_path, class: "hover:text-lime-600" %></li>
