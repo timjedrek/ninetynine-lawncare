@@ -41,12 +41,14 @@
   </nav>
 </div>
 <main>
-  <header class="w-full h-screen bg-randomhead1 <%#= randomized_background_image %> bg-cover bg-center flex justify-center items-center">
-      <div class="flex flex-col justify-center items-center mt-10 mx-20">
-          <h1 class=" text-center text-4xl sm:text-5xl font-bold">
-            Get the best lawn in your neighborhood<br>
-          </h1>
-          <%= link_to 'Schedule a quote', root_path, class: "mt-5 text-center block p-3 px-6 bg-lime-200 rounded-full hover:bg-lime-300" %>
+  <header class="w-full h-screen bg-randomhead1 <%#= randomized_background_image %> bg-cover bg-center flex justify-center items-center" x-data>
+      <div class="flex flex-col justify-center items-center mt-10 mx-20 opacity-0 duration-[1500ms] translate-y-full"
+      x-intersect="$el.classList.add('opacity-100', 'translate-y-0')"
+      >
+        <h1 class=" text-center text-4xl sm:text-5xl font-bold">
+          Get the best lawn in your neighborhood<br>
+        </h1>
+        <%= link_to 'Schedule a quote', root_path, class: "mt-5 text-center block p-3 px-6 bg-lime-200 rounded-full hover:bg-lime-300" %>
       </div>
   </header>
 sadsdas
