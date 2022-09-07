@@ -1,58 +1,152 @@
-<!--Activate Alpine-->
-<div x-data="{ open: false }">
-  <!--Top Menu-->
-  <nav class="w-full fixed bg-white z-50" >
-    <!--Flex Container-->
-    <div class="flex flex row items-center justify-between py-5">
-      <!--Logo Box-->
-        <div class="hover:brightness-75">
-          <%= link_to root_path do %>
-            <%= image_tag "logo1.png", class: "h-16 lg:h-20 ml-5" %>
-          <% end %>
+<!--Top Menu-->
+<nav class="w-full fixed bg-white drop-shadow-2xl z-50" >
+  <!--Flex Container-->
+  <div class="flex flex row items-center justify-between py-5">
+    <!--Logo Box-->
+      <div class="hover:brightness-75">
+        <%= link_to root_path do %>
+          <%= image_tag "logo1.png", class: "h-16 lg:h-20 ml-5" %>
+        <% end %>
+      </div>
+    <!--Mobile Hamburger-->
+      <div class="lg:hidden text-4xl pr-5 hover:text-lime-600" x-on:click="open = ! open">
+        ☰
+      </div>
+    <!--Link Box Desktop-->
+      <div class="hidden lg:block mr-5 text-lg ">
+      <%= link_to "Home", root_path, class: "px-5 hover:text-lime-600" %>
+      <%= link_to "Services", root_path, class: "px-5 hover:text-lime-600" %>
+      <%= link_to "About Us", root_path, class: "px-5 hover:text-lime-600" %>
+      <%= link_to "Gallery", root_path, class: "px-5 hover:text-lime-600" %>
+      <%= link_to "Contact Us", root_path, class: "px-5 hover:text-lime-600" %>
+      </div>
+  </div>
+  <!--Mobile Menu-->
+  <div class="absolute bg-white w-full h-screen flex flex-col justify-center pb-52" x-cloak x-show="open" x-transition x-transition:enter.duration.600ms >
+    <ul class="text-center font-semibold text-lg">
+      <li class="py-3"><%= link_to "Home", root_path, class: "hover:text-lime-600" %></li>
+      <li class="py-3"><%= link_to "Services", root_path, class: "hover:text-lime-600" %></li>
+      <li class="py-3"><%= link_to "About Us", root_path, class: "hover:text-lime-600" %></li>
+      <li class="py-3"><%= link_to "Gallery", root_path, class: "hover:text-lime-600" %></li>
+      <li class="py-3"><%= link_to "Contact Us", root_path, class: "hover:text-lime-600" %></li>
+    </ul>
+  </div>
+</nav>
+<main>
+  <header class="w-full h-screen bg-randomhead1 <%#= randomized_background_image %> bg-cover bg-center flex justify-center items-center">
+      <div class="flex flex-col justify-center items-center mt-10 mx-20 opacity-0 duration-[1000ms] translate-y-full"
+      x-intersect="$el.classList.add('opacity-100', 'translate-y-0', 'z-0')"
+      >
+        <h1 class=" text-center text-4xl sm:text-5xl font-bold">
+          Get the best lawn in your neighborhood<br>
+        </h1>
+        <p class="text-center py-3">
+        Providing best in class lawn maintenance and lawn care services in the Saint Louis, Missouri area
+        </p>
+        <%= link_to 'Schedule a quote', root_path, class: " text-center block p-3 px-6 bg-lime-200 rounded-full hover:bg-lime-300" %>
+      </div>
+  </header>
+  <section class="pb-10 bg-lime-50">
+    <h1 class="text-center text-2xl font-bold pt-10 pb-3">What your neighbors think about us</h1>
+    <!--Bubble Container.  Col mobile, row desktop-->
+    <div class="lg:flex lg:flex-row">
+      <!--Bubble 1-->
+      <div class="bg-white border drop-shadow-md rounded-xl m-5 p-3 lg:w-1/3">
+        <!--Text-->
+        <div class="">
+          This lawn service was absolutely amazing this year! We called him a little bit last minute but he was able to come out and cut our lawn for us at a very reasonable price. He was very professional, very straightforward with us all season. He did an amazing job on our lawn and I could not have asked for a better service this year and going forward.
         </div>
-      <!--Mobile Hamburger-->
-        <div class="lg:hidden text-4xl pr-5 hover:text-lime-600" x-on:click="open = ! open">
-          ☰
+        <!--Signature-->
+        <div class="text-right">
+        -Shauntelle
         </div>
-      <!--Link Box Desktop-->
-        <div class="hidden lg:block mr-5 text-lg ">
-        <%= link_to "Home", root_path, class: "px-5 hover:text-lime-600" %>
-        <%= link_to "Services", root_path, class: "px-5 hover:text-lime-600" %>
-        <%= link_to "About Us", root_path, class: "px-5 hover:text-lime-600" %>
-        <%= link_to "Gallery", root_path, class: "px-5 hover:text-lime-600" %>
-        <%= link_to "Contact Us", root_path, class: "px-5 hover:text-lime-600" %>
+      </div>
+      
+      <!--Bubble 2-->
+      <div class="bg-white border drop-shadow-md rounded-xl m-5 p-3 lg:w-1/3">
+        <!--Text-->
+        <div class="">
+          It is a real treasure having this company do you work on your property. I have two properties that have been taken care of for many years by this company and there hasn't been one not one single solitary incident of any kind... they do fantastic work and their customer service is superb and like no other always polite and professional 
         </div>
+        <!--Signature-->
+        <div class="text-right">
+        -Dennis
+        </div>
+      </div>
+
+      <!--Bubble 3-->
+      <div class="bg-white border drop-shadow-md rounded-xl m-5 p-3 lg:w-1/3">
+        <!--Text-->
+        <div class="">
+          I found 99 Lawn last year and love it!  Totally dependable, great prices, and super friendly.  And my lawn looks fantastic, especially the edging.  Highly recommend.
+        </div>
+        <!--Signature-->
+        <div class="text-right">
+        -Susan
+        </div>
+      </div>
     </div>
-    <!--Mobile Menu-->
-    <div class="absolute bg-white w-full h-screen flex flex-col justify-center pb-52" x-cloak x-show="open" x-transition x-transition:enter.duration.600ms >
-      <ul class="text-center font-semibold text-lg">
-        <li class="py-3"><%= link_to "Home", root_path, class: "hover:text-lime-600" %></li>
-        <li class="py-3"><%= link_to "Services", root_path, class: "hover:text-lime-600" %></li>
-        <li class="py-3"><%= link_to "About Us", root_path, class: "hover:text-lime-600" %></li>
-        <li class="py-3"><%= link_to "Gallery", root_path, class: "hover:text-lime-600" %></li>
-        <li class="py-3"><%= link_to "Contact Us", root_path, class: "hover:text-lime-600" %></li>
-      </ul>
+  </section>
+
+  <section class="bg-lime-500 text-gray-50">
+    <h1 class="text-center text-2xl font-bold py-5">What we do</h1>
+    <!--Services? Container.  Col mobile, row desktop-->
+    <div class="lg:flex lg:flex-row lg:items-center lg:justify-center">
+      <!--Text-->
+      <div class="m-5 flex flex-col lg:w-1/3">
+        Since 2017 we provide lawn care services in the Saint Louis area. We specialize in weekly/biweekly lawn maintenance for residential/commercial properties. Based out of South County. Always accepting great customers.
+        <ul class="py-5 pl-16">
+          <li><div class="flex flex-row"><div class="pr-3">✓</div>Lawn mowing</div></li>
+          <li><div class="flex flex-row"><div class="pr-3">✓</div>Trimming</div></li>
+          <li><div class="flex flex-row"><div class="pr-3">✓</div>Blowing</div></li>
+          <li><div class="flex flex-row"><div class="pr-3">✓</div>Weed removal</div></li>
+          <li><div class="flex flex-row"><div class="pr-3">✓</div>Bush removal</div></li>
+          <li><div class="flex flex-row"><div class="pr-3">✓</div>Mulching</div></li>
+        </ul>
+      </div>
+      <!--Picture-->
+      <div class="w-full lg:m-5 lg:w-1/3">
+        <%= image_tag "hero4.jpg" %>
+      </div>
     </div>
-  </nav>
-  <main>
-    <header class="w-full h-screen bg-randomhead1 <%#= randomized_background_image %> bg-cover bg-center flex justify-center items-center">
-        <div class="flex flex-col justify-center items-center mt-10 mx-20 opacity-0 duration-[1500ms] translate-y-full"
-        x-intersect="$el.classList.add('opacity-100', 'translate-y-0', 'z-0')"
-        >
-          <h1 class=" text-center text-4xl sm:text-5xl font-bold">
-            Get the best lawn in your neighborhood<br>
-          </h1>
-          <%= link_to 'Schedule a quote', root_path, class: "mt-5 text-center block p-3 px-6 bg-lime-200 rounded-full hover:bg-lime-300" %>
-        </div>
-    </header>
-Lorem ipsum dolor sit amet, eu regione tamquam iuvaret vel. In phaedrum similique rationibus sed, et vis elitr accusam verterem. Ut modus concludaturque vix. An has purto reprimique interesset.
-
-Usu harum ubique intellegebat ei, cu vel clita efficiendi, vim an stet probo. Ut vis reque intellegebat. Aliquam eruditi mnesarchum in vis. Eu sea autem facilis, eros ferri expetenda nam ad, pro ad tempor propriae. Cu sea elit iusto periculis.
-
-Semper postulant cu vim. In iusto sonet comprehensam has. Autem maluisset vix ne, cum essent habemus ne, cu corpora moderatius ius. Nam cibo ipsum partiendo id, usu liber latine appetere eu, quot falli comprehensam nec ex. Ut vix consequat argumentum. Scripta fierent ea his, ea ignota nostrum ponderum mei, vim an hinc placerat consulatu.
-
-Essent gloriatur eu has. Quas dicat viris sea at, ne dictas nonumes phaedrum qui. Eruditi accusata mea ex. Mediocrem partiendo voluptatum mea an.
-
-Ea laudem doming philosophia usu, quo et gloriatur conceptam deseruisse, eum te adipiscing scriptorem disputationi. In has minim civibus officiis, sint dicam posidonium ut mel. At eam facer repudiare torquatos. Affert mollis argumentum qui ut, brute animal accusamus qui an, ne eum dolorem mandamus. Invenire oportere sententiae sea eu, quo velit disputando cu. Minim salutatus neglegentur his no, oblique mediocritatem his in. Ei eos impetus placerat disputationi, et duo quaeque insolens.
-  </main>
-</div>
+  </section>
+  <section>
+    <h1 class="text-center text-2xl font-bold py-5">How to get started</h1>
+    <!--Step-->
+    <div class="flex flex-col items-center pb-5">
+      <div class="border border-lime-500 border-4 rounded-full w-min py-3 px-6 text-3xl font-bold text-lime-500">
+      1
+      </div>
+      <p class="font-semibold py-3">
+      Contact us for a free quote
+      </p>
+      <p class="text-center">
+      Get in contact with us and we'll help design a lawncare program that fits your needs.
+      </p>
+    </div>
+    <!--Step-->
+    <div class="flex flex-col items-center pb-5">
+      <div class="border border-lime-500 border-4 rounded-full w-min py-3 px-5 text-3xl font-bold text-lime-500">
+      2
+      </div>
+      <p class="font-semibold py-3">
+      We get to work
+      </p>
+      <p class="text-center">
+      We'll do all the hard work so you don't have to.  We'll service your property and make sure your lawn is looking fresh and clean.
+      </p>
+    </div>
+    <!--Step-->
+    <div class="flex flex-col items-center pb-5">
+      <div class="border border-lime-500 border-4 rounded-full w-min py-3 px-5 text-3xl font-bold text-lime-500">
+      3
+      </div>
+      <p class="font-semibold py-3">
+      Enjoy your clean manicured lawn!
+      </p>
+      <p class="text-center">
+      Sit back, relax, and watch your lawn become the best in the neighborhood.  You deserve it!
+      </p>
+    </div>
+  </section>
+</main>

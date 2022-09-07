@@ -19,6 +19,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <!--Activate Alpine-->
+    <div x-data="{ open: false }">
+      <%= yield %>
+    </div>
   </body>
 </html>
