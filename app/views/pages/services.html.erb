@@ -1,0 +1,161 @@
+<%= render "shared/navbar" %>
+<main>
+  <header class="w-full h-screen bg-randomhead1 <%#= randomized_background_image %> bg-cover bg-center flex justify-center items-center">
+      <div class="flex flex-col justify-center items-center mt-32 mx-20 opacity-0 duration-[1000ms] translate-y-full"
+      x-intersect="$el.classList.add('opacity-100', 'translate-y-0', 'z-0')"
+      >
+        <h1 class=" text-center text-4xl sm:text-5xl font-bold">
+          Services<br>
+        </h1>
+        <p class="text-center py-3">
+        Providing best in class lawn maintenance and lawn care services in the Saint Louis, Missouri area
+        </p>
+        <%= link_to 'Schedule a quote', root_path, class: "text-center block p-3 px-6 bg-lime-200 rounded-lg hover:bg-lime-300" %>
+      </div>
+  </header>
+
+  <!--Testimonial section-->
+  <section class="pb-10 bg-lime-50">
+    <h1 class="text-center text-2xl font-bold pt-10 pb-3 px-5">What your neighbors think about us</h1>
+    <!--Bubble Container.  Col mobile, row desktop-->
+    <div class="lg:flex lg:flex-row">
+      <!--Bubble 1-->
+      <div class="bg-white border drop-shadow-md rounded-xl m-5 p-3 lg:w-1/3">
+        <!--Text-->
+        <div class="">
+          This lawn service was absolutely amazing this year! We called him a little bit last minute but he was able to come out and cut our lawn for us at a very reasonable price. He was very professional, very straightforward with us all season. He did an amazing job on our lawn and I could not have asked for a better service this year and going forward.
+        </div>
+        <!--Signature-->
+        <div class="text-right">
+        -Shauntelle
+        </div>
+      </div>
+      
+      <!--Bubble 2-->
+      <div class="bg-white border drop-shadow-md rounded-xl m-5 p-3 lg:w-1/3">
+        <!--Text-->
+        <div class="">
+          It is a real treasure having this company do you work on your property. I have two properties that have been taken care of for many years by this company and there hasn't been one not one single solitary incident of any kind... they do fantastic work and their customer service is superb and like no other always polite and professional 
+        </div>
+        <!--Signature-->
+        <div class="text-right">
+        -Dennis
+        </div>
+      </div>
+
+      <!--Bubble 3-->
+      <div class="bg-white border drop-shadow-md rounded-xl m-5 p-3 lg:w-1/3">
+        <!--Text-->
+        <div class="">
+          I found 99 Lawn Care last year and love it!  Totally dependable, great prices, and super friendly.  And my lawn looks fantastic, especially the edging.  Highly recommend.
+        </div>
+        <!--Signature-->
+        <div class="text-right">
+        -Susan
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Information section-->
+  <section class="bg-lime-500 text-gray-50">
+    <h1 class="text-center text-2xl font-bold py-5">What we do</h1>
+    <!--Services? Container.  Col mobile, row desktop-->
+    <div class="lg:flex lg:flex-row lg:items-center lg:justify-center">
+      <!--Text-->
+      <div class="m-5 flex flex-col lg:w-1/3">
+        Since 2017 we provide lawn care services in the Saint Louis area. We specialize in weekly/biweekly lawn maintenance for residential/commercial properties. Based out of South County. Always accepting great customers.
+        <ul class="py-5 pl-16 overflow-hidden">
+          <li class="opacity-0 duration-[1500ms] translate-x-full" x-intersect="$el.classList.add('opacity-100', 'translate-x-0', 'z-0')"><div class="flex flex-row"><div class="pr-3">✓</div>Lawn mowing</div></li>
+          <li class="opacity-0 duration-[1500ms] translate-x-full" x-intersect="$el.classList.add('opacity-100', 'translate-x-0', 'z-0')"><div class="flex flex-row"><div class="pr-3">✓</div>Trimming</div></li>
+          <li class="opacity-0 duration-[1500ms] translate-x-full" x-intersect="$el.classList.add('opacity-100', 'translate-x-0', 'z-0')"><div class="flex flex-row"><div class="pr-3">✓</div>Blowing</div></li>
+          <li class="opacity-0 duration-[1500ms] translate-x-full" x-intersect="$el.classList.add('opacity-100', 'translate-x-0', 'z-0')"><div class="flex flex-row"><div class="pr-3">✓</div>Weed removal</div></li>
+          <li class="opacity-0 duration-[1500ms] translate-x-full" x-intersect="$el.classList.add('opacity-100', 'translate-x-0', 'z-0')"><div class="flex flex-row"><div class="pr-3">✓</div>Bush removal</div></li>
+          <li class="opacity-0 duration-[1500ms] translate-x-full" x-intersect="$el.classList.add('opacity-100', 'translate-x-0', 'z-0')"><div class="flex flex-row"><div class="pr-3">✓</div>Mulching</div></li>
+          <li class="opacity-0 duration-[1500ms] translate-x-full" x-intersect="$el.classList.add('opacity-100', 'translate-x-0', 'z-0')"><div class="flex flex-row"><div class="pr-3">✓</div>Anything lawn care related!</div></li>
+        </ul>
+      </div>
+      <!--Picture-->
+      <div class="w-full lg:m-5 lg:w-1/3">
+        <%= image_tag "hero4.jpg", class: "lg:rounded-xl lg:drop-shadow-xl" %>
+      </div>
+    </div>
+  </section>
+  <section class="pb-10">
+    <h1 class="text-center text-2xl font-bold py-5">How to get started</h1>
+    <!--Step-->
+    <div class="flex flex-col items-center pb-5 lg:flex-row lg:justify-center opacity-0 duration-[1000ms] translate-y-full" x-intersect="$el.classList.add('opacity-100', 'translate-y-0', 'z-0')">
+      <!--Number-->
+      <div class="border border-lime-500 border-4 rounded-full w-min py-3 px-6 text-3xl font-bold text-lime-500">
+      1
+      </div>
+      <!--Text-->
+      <div class="flex flex-col items-center lg:items-start lg:ml-10 lg:w-1/2">
+        <p class="font-semibold py-3">
+        Contact us for a free quote
+        </p>
+        <p class="text-center px-10 lg:px-0 lg:text-left">
+        Get in contact with us and we'll help design a lawn care program that fits your needs.
+        </p>
+      </div>
+    </div>
+    <!--Step-->
+    <div class="flex flex-col items-center pb-5 lg:flex-row lg:justify-center opacity-0 duration-[1000ms] translate-y-full" x-intersect="$el.classList.add('opacity-100', 'translate-y-0', 'z-0')">
+      <!--Number-->
+      <div class="border border-lime-500 border-4 rounded-full w-min py-3 px-5 text-3xl font-bold text-lime-500">
+      2
+      </div>
+      <!--Text-->
+      <div class="flex flex-col items-center lg:items-start lg:ml-10 lg:w-1/2">      
+        <p class="font-semibold py-3">
+        We get to work
+        </p>
+        <p class="text-center px-10 lg:px-0 lg:text-left">
+        We'll do all the hard work so you don't have to.  We'll service your property and make sure your lawn is looking fresh and clean.
+        </p>
+      </div>
+    </div>
+    <!--Step-->
+    <div class="flex flex-col items-center pb-5 lg:flex-row lg:justify-center opacity-0 duration-[1000ms] translate-y-full" x-intersect="$el.classList.add('opacity-100', 'translate-y-0', 'z-0')">
+      <!--Number-->
+      <div class="border border-lime-500 border-4 rounded-full w-min py-3 px-5 text-3xl font-bold text-lime-500">
+      3
+      </div>
+      <!--Text-->
+      <div class="flex flex-col items-center lg:items-start lg:ml-10 lg:w-1/2">
+        <p class="font-semibold py-3">
+        Enjoy your clean manicured lawn!
+        </p>
+        <p class="text-center px-10 lg:px-0 lg:text-left">
+        Sit back, relax, and watch your lawn become the best in the neighborhood.  You deserve it!
+        </p>
+      </div>
+    </div>
+  </section>
+  <!--Call to Action Section-->
+  <section class="bg-lime-500 py-10 px-5 flex flex-col items-center">
+    <!--Main box-->
+    <div class="w-full lg:w-4/5 duration-[8000ms] scale-95" x-intersect="$el.classList.add('scale-105', 'z-0')" >
+      <div class="bg-white drop-shadow-2xl rounded-2xl flex flex-col lg:flex-row">
+        <!--Image stuff-->
+        <%= image_tag "hero3.jpg", class: "w-full rounded-t-2xl saturate-200 lg:w-2/5 lg:rounded-l-2xl lg:rounded-r-none" %>
+        <!--Text Stuff-->
+        <div class="text-gray-800 px-3 pt-7 pb-3 flex flex-col justify-center">
+          <h3 class="font-semibold pl-3">Lawn Care in Saint Louis, Missouri</h3>
+          <h2 class="font-bold text-3xl pl-3">Contact us today!</h2>
+          <p class=" pl-3">
+          Contact us today and get a free estimate on your lawn.  We'll work with you and design a lawn care program that fits your needs.
+          </p>
+          <%= link_to root_path do %>
+            <div class="flex flex-row justify-center p-3 lg:justify-start lg:mt-8">
+              <div class="text-center p-3 px-6 bg-lime-200 rounded-lg hover:bg-lime-300 w-2/3 lg:w-1/3">
+                Contact Us
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<%= render "shared/footer" %>
