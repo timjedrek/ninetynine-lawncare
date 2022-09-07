@@ -15,7 +15,7 @@
     <!--Link Box Desktop-->
       <div class="hidden lg:block mr-5 text-lg ">
       <%= link_to "Home", root_path, class: "px-5 hover:text-lime-600" %>
-      <%= link_to "Services", root_path, class: "px-5 hover:text-lime-600" %>
+      <%= link_to "Services", services_path, class: "px-5 hover:text-lime-600" %>
       <%= link_to "About Us", root_path, class: "px-5 hover:text-lime-600" %>
       <%= link_to "Gallery", root_path, class: "px-5 hover:text-lime-600" %>
       <%= link_to "Contact Us", root_path, class: "px-5 hover:text-lime-600" %>
@@ -25,7 +25,7 @@
   <div class="absolute bg-white w-full h-screen flex flex-col justify-center pb-52" x-cloak x-show="open" x-transition x-transition:enter.duration.600ms >
     <ul class="text-center font-semibold text-lg">
       <li class="py-3"><%= link_to "Home", root_path, class: "hover:text-lime-600" %></li>
-      <li class="py-3"><%= link_to "Services", root_path, class: "hover:text-lime-600" %></li>
+      <li class="py-3"><%= link_to "Services", services_path, class: "hover:text-lime-600" %></li>
       <li class="py-3"><%= link_to "About Us", root_path, class: "hover:text-lime-600" %></li>
       <li class="py-3"><%= link_to "Gallery", root_path, class: "hover:text-lime-600" %></li>
       <li class="py-3"><%= link_to "Contact Us", root_path, class: "hover:text-lime-600" %></li>
