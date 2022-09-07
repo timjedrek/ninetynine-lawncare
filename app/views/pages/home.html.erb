@@ -43,13 +43,13 @@
         <p class="text-center py-3">
         Providing best in class lawn maintenance and lawn care services in the Saint Louis, Missouri area
         </p>
-        <%= link_to 'Schedule a quote', root_path, class: "text-center block p-3 px-6 bg-lime-200 rounded-full hover:bg-lime-300" %>
+        <%= link_to 'Schedule a quote', root_path, class: "text-center block p-3 px-6 bg-lime-200 rounded-lg hover:bg-lime-300" %>
       </div>
   </header>
 
   <!--Testimonial section-->
   <section class="pb-10 bg-lime-50">
-    <h1 class="text-center text-2xl font-bold pt-10 pb-3">What your neighbors think about us</h1>
+    <h1 class="text-center text-2xl font-bold pt-10 pb-3 px-5">What your neighbors think about us</h1>
     <!--Bubble Container.  Col mobile, row desktop-->
     <div class="lg:flex lg:flex-row">
       <!--Bubble 1-->
@@ -149,7 +149,7 @@
       </div>
     </div>
     <!--Step-->
-    <div class="flex flex-col items-center pb-5 lg:flex-row lg:justify-center">
+    <div class="flex flex-col items-center pb-5 lg:flex-row lg:justify-center lg:pb-16">
       <!--Number-->
       <div class="border border-lime-500 border-4 rounded-full w-min py-3 px-5 text-3xl font-bold text-lime-500">
       3
@@ -174,13 +174,13 @@
         <%= image_tag "hero3.jpg", class: "w-full rounded-t-2xl saturate-200 lg:w-2/5 lg:rounded-l-2xl lg:rounded-r-none" %>
         <!--Text Stuff-->
         <div class="text-gray-800 px-3 pt-7 pb-3 flex flex-col justify-center">
-          <h3 class="font-semibold">Lawn Care in Saint Louis, Missouri</h3>
-          <h2 class="font-bold text-3xl">Contact us today!</h2>
-          <p>
+          <h3 class="font-semibold pl-3">Lawn Care in Saint Louis, Missouri</h3>
+          <h2 class="font-bold text-3xl pl-3">Contact us today!</h2>
+          <p class=" pl-3">
           Contact us today and get a free estimate on your lawn.  We'll work with you and design a lawn care program that fits your needs.
           </p>
           <%= link_to root_path do %>
-            <div class="flex flex-row justify-center p-3 lg:justify-start">
+            <div class="flex flex-row justify-center p-3 lg:justify-start lg:mt-8">
               <div class="text-center p-3 px-6 bg-lime-200 rounded-lg hover:bg-lime-300 w-2/3 lg:w-1/3">
                 Contact Us
               </div>
@@ -190,4 +190,9 @@
       </div>
     </div>
   </section>
+  <footer class="">
+    <div class="text-center py-3 text-xs italic">
+      Copyright 2022 99 Lawn Care LLC
+    </div>
+  </footer>
 </main>
