@@ -166,9 +166,9 @@
     </div>
   </section>
   <!--Call to Action Section-->
-  <section class="bg-lime-500 py-10 px-5">
+  <section class="bg-lime-500 py-10 px-5 flex flex-col items-center ">
     <!--Main box-->
-    <div class="flex flex-col items-center w-full">
+    <div class="w-full lg:w-4/5">
       <div class="bg-white drop-shadow-2xl rounded-2xl flex flex-col lg:flex-row">
         <!--Image stuff-->
         <%= image_tag "hero3.jpg", class: "w-full rounded-t-2xl saturate-200 lg:w-2/5 lg:rounded-l-2xl lg:rounded-r-none" %>
@@ -192,7 +192,7 @@
   </section>
   <footer class="">
     <div class="text-center py-3 text-xs italic">
-      Copyright 2022 99 Lawn Care LLC
+      Copyright <%= Date.today.year %> 99 Lawn Care LLC
     </div>
   </footer>
 </main>
