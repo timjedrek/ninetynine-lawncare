@@ -13,12 +13,14 @@
         ☰
       </div>
     <!--Link Box Desktop-->
-      <div class="hidden lg:block mr-5 text-lg ">
-      <%= link_to "Home", root_path, class: "px-5 hover:text-lime-600" %>
-      <%= link_to "About Us", root_path, class: "px-5 hover:text-lime-600" %>
-      <%= link_to "Services", services_path, class: "px-5 hover:text-lime-600" %>
-      <%= link_to "Gallery", root_path, class: "px-5 hover:text-lime-600" %>
-      <%= link_to "Contact Us", root_path, class: "px-5 hover:text-lime-600" %>
+      <div class="hidden lg:block mr-5 text-lg lg:flex lg:flex-row lg:items-center">
+        <%= link_to "Home", root_path, class: "px-5 hover:text-lime-600" %>
+        <%= link_to "About Us", root_path, class: "px-5 hover:text-lime-600" %>
+        <%= link_to "Services", services_path, class: "px-5 hover:text-lime-600" %>
+        <%= link_to "Gallery", root_path, class: "px-5 hover:text-lime-600" %>
+        <%= link_to "Contact Us", root_path, class: "px-5 hover:text-lime-600" %>
+        <!--Do we want this?-->
+        <!--<%= image_tag "phone.png", class: "h-4 object-cover"%> <div class="pl-2">1-314-XXX-YYYY</div>-->
       </div>
   </div>
   <!--Mobile Menu-->
