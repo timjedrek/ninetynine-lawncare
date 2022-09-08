@@ -8,78 +8,107 @@
           Services<br>
         </h1>
         <p class="text-center py-3">
-        We specialize in weekly/biweekly lawn maintenance for residential/commercial properties
+        We specialize in weekly/biweekly lawn maintenance for residential and commercial properties
         </p>
         <%= link_to 'Contact Us', root_path, class: "text-center block p-3 px-6 bg-lime-200 rounded-lg hover:bg-lime-300 " %>
       </div>
   </header>
   <!--Lawn Mowing section-->
   <section class="">
-    <h1 class="text-center text-2xl font-bold py-5">Lawn Mowing</h1>
+    <h1 class="text-center text-2xl font-bold p-5">Lawn Mowing</h1>
     <!--Services? Container.  Col mobile, row desktop-->
-    <div class="lg:flex lg:flex-row-reverse lg:items-center lg:justify-center">
-      <!--Text-->
-      <div class="m-5 flex flex-col lg:w-1/3">
-        Lawn care and maintenance takes time and the right equipment to do it right. 99 Lawn Care is prepared to handle even the most complex mowing needs. When hiring someone to care for your yard, you want to make sure it's a company you can trust.  You can rest assured that your yard mowing services will get done right. It's that simple. Just ask our happy customers.
-      </div>
+    <div class="lg:flex lg:flex-row lg:items-center lg:justify-center">
       <!--Picture-->
       <div class="w-full lg:m-5 lg:w-1/3">
         <%= image_tag "mower.jpg", class: "lg:rounded-xl lg:drop-shadow-xl" %>
       </div>
+      <!--Text-->
+      <div class="m-5 flex flex-col lg:w-1/3">
+        Lawn care and maintenance takes time and the right equipment to do it right. 99 Lawn Care is prepared to handle even the most complex mowing needs. When hiring someone to care for your yard, you want to make sure it's a company you can trust.  You can rest assured that your yard mowing services will get done right. It's that simple. Just ask our happy customers.
+      </div>
     </div>
   </section>
 
-  <section class="bg-lime-500 pb-10">
-    <h1 class="text-center text-2xl font-bold py-5">How to get started</h1>
-    <!--Step-->
-    <div class="flex flex-col items-center pb-5 lg:flex-row lg:justify-center opacity-0 duration-[1000ms] translate-y-full" x-intersect="$el.classList.add('opacity-100', 'translate-y-0', 'z-0')">
-      <!--Number-->
-      <div class="border border-lime-500 border-4 rounded-full w-min py-3 px-6 text-3xl font-bold text-lime-500">
-      1
+  <!--trimming section-->
+  <section class="">
+    <h1 class="text-center text-2xl font-bold p-5">Trimming</h1>
+    <!--Services? Container.  Col mobile, row desktop-->
+    <div class="lg:flex lg:flex-row-reverse lg:items-center lg:justify-center">
+      <!--Picture-->
+      <div class="w-full lg:m-5 lg:w-1/3">
+        <%= image_tag "trimmer.jpg", class: "lg:rounded-xl lg:drop-shadow-xl" %>
       </div>
       <!--Text-->
-      <div class="flex flex-col items-center lg:items-start lg:ml-10 lg:w-1/2">
-        <p class="font-semibold py-3">
-        Contact us for a free quote
-        </p>
-        <p class="text-center px-10 lg:px-0 lg:text-left">
-        Get in contact with us and we'll help design a lawn care program that fits your needs.
-        </p>
-      </div>
-    </div>
-    <!--Step-->
-    <div class="flex flex-col items-center pb-5 lg:flex-row lg:justify-center opacity-0 duration-[1000ms] translate-y-full" x-intersect="$el.classList.add('opacity-100', 'translate-y-0', 'z-0')">
-      <!--Number-->
-      <div class="border border-lime-500 border-4 rounded-full w-min py-3 px-5 text-3xl font-bold text-lime-500">
-      2
-      </div>
-      <!--Text-->
-      <div class="flex flex-col items-center lg:items-start lg:ml-10 lg:w-1/2">      
-        <p class="font-semibold py-3">
-        We get to work
-        </p>
-        <p class="text-center px-10 lg:px-0 lg:text-left">
-        We'll do all the hard work so you don't have to.  We'll service your property and make sure your lawn is looking fresh and clean.
-        </p>
-      </div>
-    </div>
-    <!--Step-->
-    <div class="flex flex-col items-center pb-5 lg:flex-row lg:justify-center opacity-0 duration-[1000ms] translate-y-full" x-intersect="$el.classList.add('opacity-100', 'translate-y-0', 'z-0')">
-      <!--Number-->
-      <div class="border border-lime-500 border-4 rounded-full w-min py-3 px-5 text-3xl font-bold text-lime-500">
-      3
-      </div>
-      <!--Text-->
-      <div class="flex flex-col items-center lg:items-start lg:ml-10 lg:w-1/2">
-        <p class="font-semibold py-3">
-        Enjoy your clean manicured lawn!
-        </p>
-        <p class="text-center px-10 lg:px-0 lg:text-left">
-        Sit back, relax, and watch your lawn become the best in the neighborhood.  You deserve it!
-        </p>
+      <div class="m-5 flex flex-col lg:w-1/3">
+        There are many reasons to trim your lawn and prune your landscaping.  Most homeowners prefer a neat and orderly look to their yard.  Your landscaping provides a beautiful frame for your home, but only if it's properly trimmed and cleaned.  Proper maintenance for different kinds of plants can be tricky.  You can't just go cutting away at the branches haphazardly or you will risk permanently damaging the plant.  Large trimming and pruning jobs should be handled by a seasoned pro and that's why 99 Lawn Care's fleet of landscaping experts are here to help!
       </div>
     </div>
   </section>
+
+  <!--blowing section-->
+  <section class="">
+    <h1 class="text-center text-2xl font-bold p-5">Blowing and Yard Clean Up</h1>
+    <!--Services? Container.  Col mobile, row desktop-->
+    <div class="lg:flex lg:flex-row lg:items-center lg:justify-center">
+      <!--Picture-->
+      <div class="w-full lg:m-5 lg:w-1/3">
+        <%= image_tag "leaves.jpg", class: "lg:rounded-xl lg:drop-shadow-xl" %>
+      </div>
+      <!--Text-->
+      <div class="m-5 flex flex-col lg:w-1/3">
+        It's important to keep your lawn looking at its best and a yard clean up will can do the trick!  Appearance isn't the only thing a yard clean will help with, there are many other horticultural benefits.  Too many leaves and cut grass can result in the grass underneath to die due to the sunlight not being able to penetrate through the thick layer of leaves and grass.  Patches of dead, brown grass will result for more work for you down the road.  99 Lawn Care will remove the leaves, twigs, and obvious debris covering up your lawn and keep your lawn looking green and healthy.
+      </div>
+    </div>
+  </section>
+
+  <!--removal section-->
+  <section class="">
+    <h1 class="text-center text-2xl font-bold p-5">Weed and Bush Removal</h1>
+    <!--Services? Container.  Col mobile, row desktop-->
+    <div class="lg:flex lg:flex-row-reverse lg:items-center lg:justify-center">
+      <!--Picture-->
+      <div class="w-full lg:m-5 lg:w-1/3">
+        <%= image_tag "weed.jpg", class: "lg:rounded-xl lg:drop-shadow-xl" %>
+      </div>
+      <!--Text-->
+      <div class="m-5 flex flex-col lg:w-1/3">
+        Weeds can distract from a beautiful lawn, but with our preventative maintenance we can help make your lawn look healthier and greener while eliminating even the most aggressive weeds all without harming your lawn.  Pulling weeds can be a back breaking task. If you need weed pulling service in Saint Louis we are here help. Don't pull them yourself. Leave the dirty work to 99 Lawn Care!
+      </div>
+    </div>
+  </section>
+
+  <!--mulching section-->
+  <section class="">
+    <h1 class="text-center text-2xl font-bold p-5">Mulching</h1>
+    <!--Services? Container.  Col mobile, row desktop-->
+    <div class="lg:flex lg:flex-row lg:items-center lg:justify-center">
+      <!--Picture-->
+      <div class="w-full lg:m-5 lg:w-1/3">
+        <%= image_tag "mulch.jpg", class: "lg:rounded-xl lg:drop-shadow-xl" %>
+      </div>
+      <!--Text-->
+      <div class="m-5 flex flex-col lg:w-1/3">
+        Mulch provides nutrients back into the soil and into your yard as it slowly breaks down over the course of the year. Fresh mulch can prevent weed growth and encourage your existing plants to grow more full when they flower. Not only is it good for your yard, but choosing a color that goes well with your house will also make your home more beautiful.  If your goal is to be an envy of the neighborhood, healthy landscaping and fresh mulch are the first step!
+      </div>
+    </div>
+  </section>
+
+  <!--anything section-->
+  <section class="">
+    <h1 class="text-center text-2xl font-bold p-5">Anything and Everything Lawn Care</h1>
+    <!--Services? Container.  Col mobile, row desktop-->
+    <div class="lg:flex lg:flex-col lg:items-center lg:justify-center">
+      <!--Picture-->
+      <div class="w-full lg:m-5 lg:w-1/2">
+        <%= image_tag "team.jpg", class: "lg:rounded-xl lg:drop-shadow-xl" %>
+      </div>
+      <!--Text-->
+      <div class="m-5 flex flex-col lg:w-1/2">
+        We are 99 Lawn Care and we are your lawn care professionals.  Servicing the Saint Louis, Missouri area we can perform all of your lawn care and landscaping needs.  Big or small, we can do the job!  Our lawn service team is ready to offer you the best landscape maintenance and lawn mowing services in Saint Louis, Missouri.  All of our lawn service jobs are guaranteed to be satisfactory, our reputation relies on it. If you want our lawn care services or lawn mowing services, give us a ring and get in contact!
+      </div>
+    </div>
+  </section>
+
   <%= render "shared/contact_us"%>
 </main>
 <%= render "shared/footer" %>
