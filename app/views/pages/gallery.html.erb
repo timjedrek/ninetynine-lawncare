@@ -1,0 +1,48 @@
+<%= render "shared/navbar" %>
+<main class="">
+  <!--Spacer lol-->
+  <div class="h-28"></div>
+  <!--Desktop Gallery-->
+  <section class="overflow-hidden text-gray-700 bg-lime-50 hidden lg:block">
+    <div class="container px-5 py-2 mx-auto lg:py-10 lg:px-32">
+      <div class="flex flex-wrap -m-1 md:-m-2">
+        <div class="flex flex-wrap w-1/2">
+          <div class="w-1/2 p-1 md:p-2">
+            <%= image_tag "hilmo3.jpg", class: "block object-cover object-left w-full h-full rounded-lg" %>
+          </div>
+          <div class="w-1/2 p-1 md:p-2">
+            <%= image_tag "hilmo4.jpg", class: "block object-cover object-center w-full h-full rounded-lg" %>
+          </div>
+          <div class="w-full p-1 md:p-2">
+            <%= image_tag "hilmo2.jpg", class: "block object-cover object-center w-full h-full rounded-lg" %>
+          </div>
+        </div>
+        <div class="flex flex-wrap w-1/2">
+          <div class="w-full p-1 md:p-2">
+            <%= image_tag "team.jpg", class: "block object-cover object-center w-full h-full rounded-lg" %>
+          </div>
+          <div class="w-1/2 p-1 md:p-2">
+            <%= image_tag "hilmo5.jpg", class: "block object-cover object-center w-full h-full rounded-lg" %>
+          </div>
+          <div class="w-1/2 p-1 md:p-2">
+            <%= image_tag "hilmo1.jpg", class: "block object-cover object-center w-full h-full rounded-lg" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Mobile images-->
+  <section class="bg-lime-50">
+    <div class="flex flex-col px-5 py-5 lg:hidden">
+      <%= image_tag "team.jpg", class: "rounded-[45px] drop-shadow-lg py-3" %>
+      <%= image_tag "hilmo2.jpg", class: "rounded-[45px] drop-shadow-lg py-3" %>
+      <%= image_tag "hilmo3.jpg", class: "rounded-[45px] drop-shadow-lg py-3" %>
+      <%= image_tag "hilmo4.jpg", class: "rounded-[45px] drop-shadow-lg py-3" %>
+      <%= image_tag "hilmo5.jpg", class: "rounded-[45px] drop-shadow-lg py-3" %>
+      <%= image_tag "hilmo1.jpg", class: "rounded-[45px] drop-shadow-lg py-3" %>
+    </div>
+  </section>
+
+  <%= render "shared/contact_us" %>
+</main>
+<%= render "shared/footer" %>
