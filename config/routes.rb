@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'services', to: 'pages#services'
   get 'about', to: 'pages#about'
   get 'gallery', to: 'pages#gallery'
+  get 'contact', to: 'messages#new'
 
   root "pages#home"
 end
