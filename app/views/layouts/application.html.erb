@@ -21,6 +21,11 @@
   <body>
     <!--Activate Alpine-->
     <div x-data="{ open: false }">
+
+    <% if admin_signed_in? %>
+      <!--USER MENU-->
+      <%= render "shared/user_menu" %>
+    <% end %>
       <%= yield %>
     </div>
   </body>

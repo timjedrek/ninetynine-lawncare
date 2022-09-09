@@ -1,0 +1,31 @@
+<div x-data="{ usermenu: false }" class="">
+  <div class="w-full h-16 bg-stone-700 flex flex-row justify-between items-center">
+    <div class="pl-10 text-stone-100">
+      Welcome, <%= current_admin.email %>
+    </div>
+
+    <!--Hamburger button-->
+    <button @click="usermenu = ! usermenu;" class="text-stone-500 text-4xl pr-5 pb-1 hover:text-stone-800 lg:hidden">
+      ☰
+    </button >
+    
+    <!--desktop menu-->
+    <div class="hidden lg:block lg:flex lg:flex-row lg:pr-10 xl:pr-5">
+      <!--Button-->
+      <%= button_to 'Messages', messages_path, method: :get, class: "text-center block p-3 px-6 mr-5 text-stone-900 bg-stone-200 rounded-lg hover:bg-stone-300" %>
+      <%= button_to 'Sign Out', destroy_admin_session_path, method: :delete, class: "text-center block p-3 px-6 mr-5 text-stone-900 bg-stone-200 rounded-lg hover:bg-stone-300" %>
+    </div>
+  </div>
+
+    <!--Mobile Menu--->
+    <div x-show="usermenu" x-transition.duration.200ms class="bg-stone-700 flex flex-col justify-start items-center pb-10">
+      <%= button_to 'Messages', messages_path, method: :get, class: "text-center text-stone-100 hover:text-stone-400 leading-10" %>
+      <%= button_to 'Sign Out', destroy_admin_session_path, method: :delete, class: "text-center text-stone-100 hover:text-stone-400 leading-10" %>
+
+    <!--Close button-->
+    <button @click="usermenu = ! usermenu;" class="leading-10 text-stone-100 hover:text-stone-400 hover:bg-stone-700 border-2 hover:border-stone-400 w-min mt-5 px-5 rounded-full py-1">
+      X
+    </button>
+
+    </div>
+  </div>
