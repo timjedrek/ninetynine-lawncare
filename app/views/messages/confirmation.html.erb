@@ -1,4 +1,7 @@
-<main class="bg-zinc-50 w-full flex flex-col items-center justify-center">
+<%= render "shared/navbar" %>
+<!--Spacer lol-->
+<div class="h-28"></div>
+<main class="bg-lime-50 w-full flex flex-col items-center justify-center">
   <!--Container for contents-->
   <div class="text-center lg:w-3/5 md:w-4/5">
     
@@ -7,9 +10,9 @@
     <!--Container for check-->
     <div class="flex flex-row justify-center">
       <!--circle of check-->
-      <div class="bg-green-300 rounded-full py-3 px-4 mb-10">
+      <div class="bg-lime-300 rounded-full py-3 px-4 mb-10">
         <!--check itself-->
-        <div class="text-green-500 text-5xl">✓</div>
+        <div class="text-lime-500 text-5xl">✓</div>
       </div>
     </div>
     
@@ -24,13 +27,13 @@
   
     
     <p class="px-5">
-    Thank you for contacting Tim Jedrek LLC.  We are looking forward to working with you soon.  We will review your message and get back with you within 1-5 business days.  <br><br>
-    You can also give us a call at 1-314-358-2100 or email us at <%= mail_to 'support@timjedrek.com', class: "text-red-800 hover:underline"%>
+    Thank you for contacting 99 Lawn Care.  We are looking forward to working with you soon.  We will review your message and get back with you within 1-5 business days.  <br><br>
+    You can also give us a call at 1-314-600-4038 or email us at <%= mail_to 'service@99lawncare.com', class: "text-lime-800 hover:underline"%>
     </p>
 
     <div class="pt-10 flex flex-row justify-center">
     <%= link_to root_path do %>
-      <div class="rounded-lg bg-red-800 hover:bg-red-700 active:bg-red-600 text-white py-3 px-32 mb-10">
+      <div class="rounded-lg bg-lime-200 hover:bg-lime-300 text-lime-900 py-3 px-32 mb-10">
         Home
       </div>
     <% end %>
@@ -40,3 +43,5 @@
     <%#= link_to 'Back to messages', messages_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
   </div>
 </main>
+
+<%= render "shared/footer"%>
