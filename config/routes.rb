@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  Rails.application.routes.draw do
-    devise_scope :admin do
-      # Redirests signing out users back to sign-in
-      get "admins", to: "devise/sessions#new"
-    end
+  devise_scope :admin do
+    # Redirests signing out users back to sign-in
+    get "admins", to: "devise/sessions#new"
+  end
   
   devise_for :admins
   resources :messages
