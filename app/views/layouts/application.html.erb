@@ -25,6 +25,8 @@
     <% if admin_signed_in? %>
       <!--USER MENU-->
       <%= render "shared/user_menu" %>
+      <!--spacer-->
+      <div class="h-16"></div>
     <% end %>
       <%= yield %>
     </div>
