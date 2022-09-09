@@ -18,7 +18,9 @@
   </div>
 
     <!--Mobile Menu--->
-    <div x-show="usermenu" x-transition.duration.200ms class="bg-stone-700 flex flex-col justify-start items-center pb-10">
+    <div x-show="usermenu" x-transition.duration.200ms class="bg-stone-700 flex flex-col justify-start items-center pb-10 z-50">
+      <!--Spacer-->
+      <div class="h-16"></div>
       <%= button_to 'Messages', messages_path, method: :get, class: "text-center text-stone-100 hover:text-stone-400 leading-10" %>
       <%= button_to 'Sign Out', destroy_admin_session_path, method: :delete, class: "text-center text-stone-100 hover:text-stone-400 leading-10" %>
 
