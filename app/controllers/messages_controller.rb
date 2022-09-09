@@ -28,6 +28,7 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
+        #MessageMailer.new_message(@message).deliver
         format.html { redirect_to contact_confirmation_path, notice: @message.content}
         format.json { render :show, status: :created, location: @message }
       else
