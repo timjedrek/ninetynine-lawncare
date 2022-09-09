@@ -8,6 +8,6 @@ class MessageMailer < ApplicationMailer
   def new_message(message)
     @message = message
     
-    mail to: @message.email, bcc: "tim@timjedrek.com", subject: "Message Sent to 99 Lawn Care"
+    mail to: @message.email, bcc: "service@99lawncare.com", subject: "Message Sent to 99 Lawn Care"
   end
 end
