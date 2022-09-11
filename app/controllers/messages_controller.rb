@@ -28,10 +28,10 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
 
     respond_to do |format|
-      if @message.save
-        MessageMailer.new_message(@message).deliver
-        format.html { redirect_to contact_confirmation_path, notice: @message.content}
-        format.json { render :show, status: :created, location: @message }
+      if @message.save && verify_recaptcha(model: @message)
+          MessageMailer.new_message(@message).deliver
+          format.html { redirect_to contact_confirmation_path, notice: @message.content}
+          format.json { render :show, status: :created, location: @message }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @message.errors, status: :unprocessable_entity }
