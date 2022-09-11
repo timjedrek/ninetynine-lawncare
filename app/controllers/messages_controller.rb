@@ -43,6 +43,11 @@ class MessagesController < ApplicationController
   def update
     respond_to do |format|
       if @message.update(message_params)
+        # COMMENTING THIS OUT BELOW -- Weird error here.. So basically, if user fails the recaptcha, then it fails it and reloads page.. 
+        # but then.. after they pass recaptcha, it takes them 
+        # to the sign in page.  This is because it thinks it is updating it.  
+        # So since for this app we are never updating messages, I copied the "new message" response below
+        # Below is the original "update" code
         #format.html { redirect_to message_url(@message), notice: "Message was successfully updated." }
         #format.json { render :show, status: :ok, location: @message }
         format.html { redirect_to contact_confirmation_path, notice: @message.content}
