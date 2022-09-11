@@ -3,19 +3,67 @@
   <head>
     <title>99 Lawn Care - Providing Lawn Care Services in the St. Louis Area</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- Site Created By:
+    
+         _____ _            _        _         _   
+        |_   _(_)_ __    _ | |___ __| |_ _ ___| |__
+          | | | | '  \  | || / -_) _` | '_/ -_) / /
+          |_| |_|_|_|_|  \__/\___\__,_|_| \___|_\_\
+
+
+    Nice to see you here.  Choose Tim Jedrek for all of your IT needs.  https://timjedrek.com/contact -->
+
+    <!--Meta Tags-->
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="title" content="99 Lawn Care - Providing Lawn Care Services in the St. Louis Area">
+    <meta name="description" content="We are 99 Lawn Care and we are your lawn care professionals. Servicing the Saint Louis, Missouri area we can perform all of your lawn care and landscaping needs. Big or small, we can do the job! Our lawn service team is ready to offer you the best landscape maintenance and lawn mowing services in Saint Louis, Missouri. All of our lawn service jobs are guaranteed to be satisfactory, our reputation relies on it. If you want our lawn care services or lawn mowing services, give us a ring and get in contact!">
+    <meta name="keywords" content="St. Louis, Saint Louis, Missouri, STL, Lawn Care, Lawncare, mowing, mulching, trimming, yard, yardwork, grass, lawn maintenance, leaves, landscaping, trim, mulch, green, lawnmower">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="1 days">
+    <meta name="author" content="Tim Jedrek LLC">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://99lawncare.com">
+    <meta property="og:title" content="99 Lawn Care - Providing Lawn Care Services in the St. Louis Area">
+    <meta property="og:description" content="We are 99 Lawn Care and we are your lawn care professionals. Servicing the Saint Louis, Missouri area we can perform all of your lawn care and landscaping needs. Big or small, we can do the job! Our lawn service team is ready to offer you the best landscape maintenance and lawn mowing services in Saint Louis, Missouri. All of our lawn service jobs are guaranteed to be satisfactory, our reputation relies on it. If you want our lawn care services or lawn mowing services, give us a ring and get in contact!">
+    <meta property="og:image" content="<%= image_url('team.jpg') %>">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://timjedrek.com">
+    <meta property="twitter:title" content="99 Lawn Care - Providing Lawn Care Services in the St. Louis Area">
+    <meta property="twitter:description" content="We are 99 Lawn Care and we are your lawn care professionals. Servicing the Saint Louis, Missouri area we can perform all of your lawn care and landscaping needs. Big or small, we can do the job! Our lawn service team is ready to offer you the best landscape maintenance and lawn mowing services in Saint Louis, Missouri. All of our lawn service jobs are guaranteed to be satisfactory, our reputation relies on it. If you want our lawn care services or lawn mowing services, give us a ring and get in contact!">
+    <meta property="twitter:image" content="<%= image_url('team.jpg') %>">
+
+
+
+    <!--CSS-->
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+    <!--Favicon--> 
+    <%= favicon_link_tag 'favicon.ico' %>
+    <% %w(57 72 76 114 120 144 152 180).each do |size| %>
+      <%= favicon_link_tag "apple-touch-icon-#{size}x#{size}.png", rel: 'apple-touch-icon', type: 'image/png', sizes: "#{size}x#{size}" %>
+    <% end %>
+
+    <!--JS-->
+    <%= javascript_importmap_tags %>
+
+    <!-- Alpine Plugins -->
+    <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+    <!-- Alpine Core -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>    
+    <!--For Alpine Intersect-->
     <style>
       [x-cloak] { display: none !important; }
     </style>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-    <!-- Alpine Plugins -->
-    <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
-    <!-- Alpine Core -->
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
 
   <body>
