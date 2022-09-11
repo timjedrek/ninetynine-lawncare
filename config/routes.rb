@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     get "sign_in", to: "devise/sessions#new"
   end
   
-  devise_for :admins, controllers: { registrations: "registrations" }
+  devise_for :admins, controllers: { registrations: "registrations", sessions: "sessions" }
   resources :messages
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

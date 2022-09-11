@@ -14,6 +14,9 @@
           <p class="py-2 px-3 bg-red-50 mb-5 text-red-500 font-medium rounded-lg h-full" id="alert"><%= alert %></p>
         <% end %>
         <%= render "devise/shared/error_messages", resource: resource %>
+        <% if flash[:recaptcha_error].present? %>
+        <p class="py-2 px-3 bg-red-50 mb-5 text-red-500 font-medium rounded-lg h-full" id="alert"><%= flash[:recaptcha_error] %><p>
+        <% end %>
       </div>
       <!--Container for fields/button-->
       <div class="px-10 pb-10">
@@ -27,6 +30,8 @@
           <%= form.label "Password" %>
           <%= form.password_field :password, placeholder: "Password", class: "placeholder-gray-300 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-lime-800 focus:ring-lime-800" %>
         </div>
+
+        <%= recaptcha_tags %><br>
 
         <div class="inline">
           <%= form.submit "Sign In", class: "rounded-lg py-3 px-5 w-full bg-lime-800 text-white inline-block font-medium cursor-pointer hover:bg-lime-700 active:bg-lime-600" %>
