@@ -21,6 +21,7 @@ module.exports = {
         'randomhead69' : "url('hero69.jpg')",
         'teamspace' : "url('teamspace.jpg')",
         'teamspace2' : "url('teamspace2.jpg')",
+        'errorhead' : "url('errorhead.jpg')",
       }
     },
   },
