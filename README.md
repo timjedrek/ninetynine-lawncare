@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby on Rails CMS for 99 Lawn Care Website
 
-Things you may want to cover:
+Project Start: September 1, 2022
+Deployed on: September 11, 2022
 
-* Ruby version
+visit: https://99lawncare.com
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
