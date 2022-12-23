@@ -86,7 +86,7 @@
     <!--Step-->
     <div class="flex flex-col items-center pb-5 lg:flex-row lg:justify-center opacity-0 duration-[1000ms] translate-y-full" x-intersect="$el.classList.add('opacity-100', 'translate-y-0', 'z-0')">
       <!--Number-->
-      <div class="border border-lime-500 border-4 rounded-full w-min py-3 px-6 text-3xl font-bold text-lime-500">
+      <div class=" border-lime-500 border-4 rounded-full w-min py-3 px-6 text-3xl font-bold text-lime-500">
       1
       </div>
       <!--Text-->
@@ -102,7 +102,7 @@
     <!--Step-->
     <div class="flex flex-col items-center pb-5 lg:flex-row lg:justify-center opacity-0 duration-[1000ms] translate-y-full" x-intersect="$el.classList.add('opacity-100', 'translate-y-0', 'z-0')">
       <!--Number-->
-      <div class="border border-lime-500 border-4 rounded-full w-min py-3 px-5 text-3xl font-bold text-lime-500">
+      <div class=" border-lime-500 border-4 rounded-full w-min py-3 px-5 text-3xl font-bold text-lime-500">
       2
       </div>
       <!--Text-->
@@ -118,7 +118,7 @@
     <!--Step-->
     <div class="flex flex-col items-center pb-5 lg:flex-row lg:justify-center opacity-0 duration-[1000ms] translate-y-full" x-intersect="$el.classList.add('opacity-100', 'translate-y-0', 'z-0')">
       <!--Number-->
-      <div class="border border-lime-500 border-4 rounded-full w-min py-3 px-5 text-3xl font-bold text-lime-500">
+      <div class=" border-lime-500 border-4 rounded-full w-min py-3 px-5 text-3xl font-bold text-lime-500">
       3
       </div>
       <!--Text-->
@@ -134,5 +134,26 @@
   </section>
   <!--Call to Action Section-->
   <%= render "shared/contact_us"%>
+
+  <section class="pb-10 bg-green-900 text-gray-50">
+    <h1 class="text-center text-2xl font-bold py-5">Become an Owner/Operator</h1>
+    <div class="lg:flex lg:flex-row-reverse lg:items-center lg:justify-center">
+      <!--Picture-->
+      <div class="w-full lg:m-5 lg:w-1/3">
+        <%= image_tag "mansmiling.webp", class: "lg:rounded-xl lg:drop-shadow-xl" %>
+      </div>
+      <!--Text-->
+      <div class="m-5 flex flex-col lg:w-1/3">
+        <ul class="py-5 pl-12 overflow-hidden lg:overflow-visible text-2xl">
+          <li class="opacity-0 duration-[1500ms] translate-x-full" x-intersect="$el.classList.add('opacity-100', 'translate-x-0', 'z-0')"><div class="flex flex-row py-5"><div class="pr-3">💰</div>Make Money on Your Time</div></li>
+          <li class="opacity-0 duration-[1500ms] translate-x-full" x-intersect="$el.classList.add('opacity-100', 'translate-x-0', 'z-0')"><div class="flex flex-row py-5"><div class="pr-3">👷</div>Manage Your Team</div></li>
+          <li class="opacity-0 duration-[1500ms] translate-x-full" x-intersect="$el.classList.add('opacity-100', 'translate-x-0', 'z-0')"><div class="flex flex-row py-5"><div class="pr-3">⏱️</div>Your Schedule</div></li>
+          <li class="opacity-0 duration-[1500ms] translate-x-full" x-intersect="$el.classList.add('opacity-100', 'translate-x-0', 'z-0')"><div class="flex flex-row py-5"><div class="pr-3">🤑</div>Unlimited Earning Potential</div></li>
+        </ul>
+        <%= link_to 'learn more', contact_path, class: "text-center block p-3 px-6 bg-lime-600 rounded-lg hover:bg-lime-700" %>
+      </div>
+    </div>
+  </section>
+
 </main>
 <%= render "shared/footer" %>
