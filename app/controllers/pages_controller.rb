@@ -10,4 +10,7 @@ class PagesController < ApplicationController
 
   def gallery
   end
+
+  def careers
+  end
 end
