@@ -1,1 +1,17 @@
-hello world
+<%= render "shared/navbar" %>
+<main>
+  <header class="w-full h-screen bg-errorhead bg-cover bg-center flex justify-center items-center">
+      <div class="flex flex-col justify-center items-center mt-32 mx-20 opacity-0 duration-[1000ms] scale-x-0"
+      x-intersect="$el.classList.add('opacity-100', 'scale-x-100', 'z-0')"
+      >
+        <h1 class=" text-center text-4xl sm:text-5xl font-bold">
+          Become an Owner/Operator<br>
+        </h1>
+        <p class="text-center text-xl py-3 font-semibold">
+        Make money by partnering with 99 Lawn Care
+        </p>
+        <%= link_to 'Send a Message', contact_path, class: "text-center block p-3 px-6 bg-lime-200 rounded-lg hover:bg-lime-300 " %>
+      </div>
+  </header>
+</main>
+<%= render "shared/footer" %>
