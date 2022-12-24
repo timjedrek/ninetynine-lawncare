@@ -1,6 +1,6 @@
 <%= render "shared/navbar" %>
 <main>
-  <header class="w-full h-screen-2/3 bg-randomhead1 <%#= randomized_background_image %> bg-cover bg-center flex justify-center items-center">
+  <header class="w-full h-screen-2/3 bg-head55 bg-cover bg-center flex justify-center items-center">
       <div class="flex flex-col justify-center items-center mx-20 opacity-0 duration-[1000ms] translate-y-full"
       x-intersect="$el.classList.add('opacity-100', 'translate-y-0', 'z-0')"
       >
@@ -10,7 +10,7 @@
         <p class="text-center py-3">
         Providing best in class lawn maintenance and lawn care services in the Saint Louis, Missouri area
         </p>
-        <%= link_to 'Schedule a quote', contact_path, class: "text-center block p-3 px-6 bg-lime-200 rounded-lg hover:bg-lime-300" %>
+        <%= link_to 'Schedule a quote', contact_path, class: "text-center block p-3 px-6 text-white hover:bg-lime-500 bg-lime-600 rounded-lg" %>
       </div>
   </header>
 

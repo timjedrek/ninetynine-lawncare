@@ -22,6 +22,7 @@ module.exports = {
         'teamspace' : "url('teamspace.webp')",
         'teamspace2' : "url('teamspace2.webp')",
         'errorhead' : "url('errorhead.webp')",
+        'head55' : "url('hero555.webp')",
       },
       height: theme => ({
         'screen-1/2': '50vh',
