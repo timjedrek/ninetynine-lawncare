@@ -1,18 +1,21 @@
 <%= render "shared/navbar" %>
 <main>
   <header class="w-full h-screen-2/3 bg-randomhead1 bg-cover bg-center flex justify-center items-center">
-      <div class="flex flex-col justify-center items-center mx-20 opacity-0 duration-[1000ms] scale-x-0"
+      <div class="flex flex-col justify-center items-center opacity-0 duration-[1000ms] scale-x-0"
       x-intersect="$el.classList.add('opacity-100', 'scale-x-100', 'z-0')"
       >
-        <h1 class=" text-center text-4xl sm:text-5xl font-bold">
+        <h1 class=" text-center text-4xl sm:text-5xl font-bold mx-10 ">
           Become an Owner Operator<br>
         </h1>
         <p class="text-center text-xl py-3 font-semibold">
         Start your lawn care business by partnering with 99 Lawn Care
         </p>
-        <div class="flex flex-row gap-3">
+        <p class="text-center text-md pb-5 font-semibold italic mx-5">
+        To make the first step, contact us and talk with a 99 Lawn Care team member
+        </p>
+        <div class="flex flex-col lg:flex-row gap-3">
         <button class="text-center block p-3 px-6 text-white bg-lime-700 rounded-lg hover:bg-lime-800" onClick="document.getElementById('learn').scrollIntoView();">Learn More</button>
-        <%= link_to 'Contact Us to Start Today', contact_path, class: "border-2 border-lime-800 text-center block p-3 px-6 rounded-lg bg-lime-200  hover:bg-lime-300 " %>
+        <%= link_to 'Start Today', contact_path, class: "border-2 border-lime-800 text-center block p-3 px-6 rounded-lg bg-lime-200  hover:bg-lime-300 " %>
         </div>
       </div>
   </header>
