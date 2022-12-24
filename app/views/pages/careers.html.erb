@@ -8,7 +8,7 @@
           Become an Owner Operator<br>
         </h1>
         <p class="text-center text-xl py-3 font-semibold">
-        Make money by partnering with 99 Lawn Care
+        Start your lawn care business by partnering with 99 Lawn Care
         </p>
         <%= link_to 'Send a Message', contact_path, class: "text-center block p-3 px-6 bg-lime-200 rounded-lg hover:bg-lime-300 " %>
       </div>
@@ -32,9 +32,15 @@
         We provide the training and resources to get your company off the ground and running smoothly.  We offer the benefit of economies of scale. 
       </p>
 
-      <p class="font-regular text-lg lg:w-3/5 w-4/5 text-center">
-        You can leverage the power of the 99 Lawn Care network and get better deals on supplies and equipment, help in finding new customers and leads, training and support so you become successful.
+      <p class="font-regular text-lg pb-10 lg:w-3/5 w-4/5 text-center">
+        You can leverage the power of the 99 Lawn Care network and get better deals on supplies and equipment, help in finding new customers and leads, and training and support for you to become successful.
       </p>
+
+      <p class="font-semibold text-xl  pb-10 lg:w-3/5 w-4/5 text-center">
+        Start your own business and make more money.  Give us a call or send us a message to get started.
+      </p>
+
+      <%= link_to 'Get in Touch Now', contact_path, class: "text-center block p-3 px-10 bg-lime-600 rounded-lg hover:bg-lime-500 text-white" %>
     </div>
   </section>
 
@@ -94,7 +100,7 @@
       </div>
     </div>
   </section>
-  <section class="bg-slate-50 py-10">
+  <section class="bg-slate-100 py-10">
     <div class="flex flex-col items-center">
       <div class="flex flex-col-reverse lg:flex-row lg:justify-center lg:items-center">
 
@@ -157,4 +163,23 @@
       <%= link_to "Send a Message", contact_path, class: "font-semibold bg-lime-500 hover:bg-lime-600 transition-all duration-300 text-xl text-white rounded-lg text-center py-2 px-5 lg:ml-8 lg:mr-2" %>
   </div>
 </section>
+<section class="pb-10 bg-green-900 text-gray-50">
+    <h1 class="text-center text-2xl font-bold py-5">Become an Owner/Operator</h1>
+    <div class="lg:flex lg:flex-row-reverse lg:items-center lg:justify-center">
+      <!--Picture-->
+      <div class="w-full lg:m-5 lg:w-1/3">
+        <%= image_tag "mansmiling.webp", class: "lg:rounded-xl lg:drop-shadow-xl", alt: "Man Smiling while moxing the the grass because he is an owner operator for 99 Lawn Care!" %>
+      </div>
+      <!--Text-->
+      <div class="m-5 flex flex-col lg:w-1/3">
+        <ul class="py-5 pl-12 overflow-hidden lg:overflow-visible text-xl lg:text-2xl">
+          <li class="opacity-0 duration-[1500ms] translate-x-full" x-intersect="$el.classList.add('opacity-100', 'translate-x-0', 'z-0')"><div class="flex flex-row py-3"><div class="pr-3">💰</div>Make Money on Your Time</div></li>
+          <li class="opacity-0 duration-[1500ms] translate-x-full" x-intersect="$el.classList.add('opacity-100', 'translate-x-0', 'z-0')"><div class="flex flex-row py-3"><div class="pr-3">👷</div>Manage Your Team</div></li>
+          <li class="opacity-0 duration-[1500ms] translate-x-full" x-intersect="$el.classList.add('opacity-100', 'translate-x-0', 'z-0')"><div class="flex flex-row py-3"><div class="pr-3">⏱️</div>Your Schedule</div></li>
+          <li class="opacity-0 duration-[1500ms] translate-x-full" x-intersect="$el.classList.add('opacity-100', 'translate-x-0', 'z-0')"><div class="flex flex-row py-3"><div class="pr-3">🤑</div>Unlimited Earning Potential</div></li>
+        </ul>
+        <%= link_to 'Apply Now', contact_path, class: "text-center block p-3 px-6 bg-lime-600 rounded-lg hover:bg-lime-700" %>
+      </div>
+    </div>
+  </section>
 <%= render "shared/footer" %>
