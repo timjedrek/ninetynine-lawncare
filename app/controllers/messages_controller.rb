@@ -27,14 +27,22 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
 
-    respond_to do |format|
-      if @message.save && verify_recaptcha(model: @message)
-          MessageMailer.new_message(@message).deliver
-          format.html { redirect_to contact_confirmation_path, notice: @message.content}
-          format.json { render :show, status: :created, location: @message }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @message.errors, status: :unprocessable_entity }
+    validation_text = @message.validation_text
+    
+    if validation_text == helpers.answer_check(@message.key)
+      respond_to do |format|
+        if @message.save && verify_recaptcha(model: @message)
+            MessageMailer.new_message(@message).deliver
+            format.html { redirect_to contact_confirmation_path, notice: @message.content}
+            format.json { render :show, status: :created, location: @message }
+        else
+          format.html { render :new, status: :unprocessable_entity }
+          format.json { render json: @message.errors, status: :unprocessable_entity }
+        end
+      end
+    else  
+      respond_to do |format|
+        format.html { redirect_to new_message_path, alert: "Error: You did not complete the math problem correctly" }
       end
     end
   end
@@ -78,6 +86,6 @@ class MessagesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def message_params
-      params.require(:message).permit(:name, :email, :phone, :content)
+      params.require(:message).permit(:name, :email, :phone, :content, :validation_text, :key)
     end
 end
