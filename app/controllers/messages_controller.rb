@@ -26,15 +26,15 @@ class MessagesController < ApplicationController
   # POST /messages or /messages.json
   def create
     @message = Message.new(message_params)
-
+  
     validation_text = @message.validation_text
-    
-    if validation_text == helpers.answer_check(@message.key)
+  
+    if validation_text == helpers.answer_check(@message.key) && verify_recaptcha(model: @message)
       respond_to do |format|
-        if @message.save && verify_recaptcha(model: @message)
-            MessageMailer.new_message(@message).deliver
-            format.html { redirect_to contact_confirmation_path, notice: @message.content}
-            format.json { render :show, status: :created, location: @message }
+        if @message.save
+          MessageMailer.new_message(@message).deliver
+          format.html { redirect_to contact_confirmation_path, notice: @message.content}
+          format.json { render :show, status: :created, location: @message }
         else
           format.html { render :new, status: :unprocessable_entity }
           format.json { render json: @message.errors, status: :unprocessable_entity }
@@ -42,7 +42,7 @@ class MessagesController < ApplicationController
       end
     else  
       respond_to do |format|
-        format.html { redirect_to new_message_path, alert: "Error: You did not complete the math problem correctly" }
+        format.html { redirect_to new_message_path, alert: "Error: You did not complete the math problem correctly or complete the captcha" }
       end
     end
   end
@@ -50,7 +50,7 @@ class MessagesController < ApplicationController
   # PATCH/PUT /messages/1 or /messages/1.json
   def update
     respond_to do |format|
-      if @message.update(message_params)
+      if @message.update(message_params) && verify_recaptcha(model: @message)
         # COMMENTING THIS OUT BELOW -- Weird error here.. So basically, if user fails the recaptcha, then it fails it and reloads page.. 
         # but then.. after they pass recaptcha, it takes them 
         # to the sign in page.  This is because it thinks it is updating it.  
