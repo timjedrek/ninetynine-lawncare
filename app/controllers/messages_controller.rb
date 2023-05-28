@@ -27,37 +27,11 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
   
-    validation_text = @message.validation_text
+    #validation_text = @message.validation_text
   
-    if validation_text == helpers.answer_check(@message.key) && verify_recaptcha(model: @message)
-      respond_to do |format|
-        if @message.save
-          MessageMailer.new_message(@message).deliver
-          format.html { redirect_to contact_confirmation_path, notice: @message.content}
-          format.json { render :show, status: :created, location: @message }
-        else
-          format.html { render :new, status: :unprocessable_entity }
-          format.json { render json: @message.errors, status: :unprocessable_entity }
-        end
-      end
-    else  
-      respond_to do |format|
-        format.html { redirect_to new_message_path, alert: "Error: You did not complete the math problem correctly or complete the captcha" }
-      end
-    end
-  end
-
-  # PATCH/PUT /messages/1 or /messages/1.json
-  def update
+    #if validation_text == helpers.answer_check(@message.key) && verify_recaptcha(model: @message)
     respond_to do |format|
-      if @message.update(message_params) && verify_recaptcha(model: @message)
-        # COMMENTING THIS OUT BELOW -- Weird error here.. So basically, if user fails the recaptcha, then it fails it and reloads page.. 
-        # but then.. after they pass recaptcha, it takes them 
-        # to the sign in page.  This is because it thinks it is updating it.  
-        # So since for this app we are never updating messages, I copied the "new message" response below
-        # Below is the original "update" code
-        #format.html { redirect_to message_url(@message), notice: "Message was successfully updated." }
-        #format.json { render :show, status: :ok, location: @message }
+      if @message.save && verify_recaptcha(model: @message)
         MessageMailer.new_message(@message).deliver
         format.html { redirect_to contact_confirmation_path, notice: @message.content}
         format.json { render :show, status: :created, location: @message }
@@ -66,7 +40,33 @@ class MessagesController < ApplicationController
         format.json { render json: @message.errors, status: :unprocessable_entity }
       end
     end
+    #else  
+    #  respond_to do |format|
+    #    format.html { redirect_to new_message_path, alert: "Error: You did not complete the captcha" }
+    #  end
+    #end
   end
+
+  # PATCH/PUT /messages/1 or /messages/1.json
+  #def update
+  #  respond_to do |format|
+  #    if @message.update(message_params) && verify_recaptcha(model: @message)
+  #      # COMMENTING THIS OUT BELOW -- Weird error here.. So basically, if user fails the recaptcha, then it fails it and reloads page.. 
+  #      # but then.. after they pass recaptcha, it takes them 
+  #      # to the sign in page.  This is because it thinks it is updating it.  
+  #      # So since for this app we are never updating messages, I copied the "new message" response below
+  #      # Below is the original "update" code
+  #      #format.html { redirect_to message_url(@message), notice: "Message was successfully updated." }
+  #      #format.json { render :show, status: :ok, location: @message }
+  #      MessageMailer.new_message(@message).deliver
+  #      format.html { redirect_to contact_confirmation_path, notice: @message.content}
+  #      format.json { render :show, status: :created, location: @message }
+  #    else
+  #      format.html { render :new, status: :unprocessable_entity }
+  #      format.json { render json: @message.errors, status: :unprocessable_entity }
+  #    end
+  #  end
+  #end
 
   # DELETE /messages/1 or /messages/1.json
   def destroy
