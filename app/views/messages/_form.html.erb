@@ -36,6 +36,8 @@
         <%= form.email_field :email, placeholder: "E-mail", class: "block shadow rounded-md border border-gray-200 outline-none px-3 w-full focus:border-lime-600 focus:ring-lime-600 placeholder:text-sm" %>
       </div>
 
+      <%= invisible_captcha :email_confirmation, :message %>
+
       <div class="my-5">
         <%= form.text_field :phone, placeholder: "Phone number", class: "block shadow rounded-md border border-gray-200 outline-none px-3 w-full focus:border-lime-600 focus:ring-lime-600 placeholder:text-sm" %>
       </div>

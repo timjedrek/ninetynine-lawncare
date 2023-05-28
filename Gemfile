@@ -54,6 +54,7 @@ gem "bootsnap", require: false
 #MY GEMS
 gem "figaro"
 gem "recaptcha"
+gem 'invisible_captcha'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
