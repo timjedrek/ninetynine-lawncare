@@ -32,7 +32,7 @@ class MessagesController < ApplicationController
   
     #if validation_text == helpers.answer_check(@message.key) && verify_recaptcha(model: @message)
     respond_to do |format|
-      if @message.save && verify_recaptcha(model: @message)
+      if @message.save #&& verify_recaptcha(model: @message)
         MessageMailer.new_message(@message).deliver
         format.html { redirect_to contact_confirmation_path, notice: @message.content}
         format.json { render :show, status: :created, location: @message }
