@@ -9,13 +9,6 @@ main {
     <h1 class="">Your message has been sent!</h1>
     
     
-    
-    <h4>Your Message:</h4>
-    <em>
-      <%= @message.content %>
-    </em>
-  
-    
     <p class="">
     Thank you, <%= @message.name %>, for contacting 99 Lawn Care.  We are looking forward to working with you soon.  We will review your message and get back with you within 1-5 business days.  <br><br>
     You can also give us a call at 1-314-600-4038 or email us at <%= mail_to 'service@99lawncare.com'%>
@@ -28,4 +21,19 @@ main {
     <% end %>
   
   </div>
+    <br>
+    <br>    <br>
+    <br>    <br>
+    <br>
+  -- Form Submission Details --
+
+    <h4>Your Message:</h4>
+    <em>
+      <%= @message.content %>
+    </em>
+    <br>
+    <br>
+    <b>Name:</b> <%= @message.name %> <br>
+    <b>Phone:</b> <%= @message.phone %> <br>
+    <b>Email:</b> <%= @message.email %> <br>
 </main>
