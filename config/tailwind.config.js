@@ -22,8 +22,10 @@ module.exports = {
         'teamspace' : "url('teamspace.webp')",
         'teamspace2' : "url('teamspace2.webp')",
         'errorhead' : "url('errorhead.webp')",
-        'head55' : "url('hero555.webp')",
+        'head55' : "url('hero555.webp')", /* PREVIOUS HOME BG*/
         'bench' : "url('bench.webp')",
+        'fall-bg' : "url('fall-bg.webp')",
+        
       },
       height: theme => ({
         'screen-1/2': '50vh',
