@@ -24,7 +24,7 @@ module.exports = {
         'errorhead' : "url('errorhead.webp')",
         'head55' : "url('hero555.webp')", /* PREVIOUS HOME BG*/
         'bench' : "url('bench.webp')",
-        'fall-bg' : "url('fall-bg.webp')",
+        'fall-bg' : "url('fall-bg.webp')", /* PREVIOUS HOME BG during fall*/
         
       },
       height: theme => ({
